@@ -1,0 +1,149 @@
+/* Base Styles & Utility Classes */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Fixed Contrast Input Styles */
+.calc-input {
+  width: 100%;
+  background-color: #f9fafb; /* Light mode bg */
+  border: 1px solid #e5e7eb;
+  color: #111827; /* Dark text */
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  outline: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.dark .calc-input {
+  background-color: #374151; /* Dark mode bg */
+  border-color: #4b5563;
+  color: #f9fafb; /* Light text */
+}
+.calc-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Fix for <select> options in dark mode */
+select.calc-input option {
+  background-color: #ffffff;
+  color: #111827;
+}
+.dark select.calc-input option {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+/* Labels & Buttons */
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #374151;
+}
+.dark .input-label {
+  color: #d1d5db;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #f3f4f6;
+  color: #374151;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+.save-btn:hover { background-color: #e5e7eb; }
+.dark .save-btn {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+.dark .save-btn:hover { background-color: #4b5563; }
+
+.copy-btn {
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+.copy-btn:hover { color: #10b981; }
+
+.result-container {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dark .result-container {
+  background-color: rgba(31, 41, 55, 0.5);
+  border-color: #374151;
+}
+
+/* Tab Styles */
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.active-tab {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.inactive-tab {
+  color: #6b7280;
+}
+.inactive-tab:hover {
+  background-color: #f3f4f6;
+}
+.dark .inactive-tab {
+  color: #9ca3af;
+}
+.dark .inactive-tab:hover {
+  background-color: #374151;
+}
+
+/* Radio Button Grid styling */
+.radio-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.2s;
+}
+.dark .radio-btn {
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+.peer:checked + .radio-btn {
+  background-color: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+/* Toast Animation */
+.toast-show {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* BMI Status Colors */
+.bmi-under { background-color: #fef08a; color: #854d0e; }
+.bmi-normal { background-color: #bbf7d0; color: #166534; }
+.bmi-over { background-color: #fed7aa; color: #9a3412; }
+.bmi-obese { background-color: #fecaca; color: #991b1b; }
+.dark .bmi-under { background-color: rgba(254, 240, 138, 0.2); color: #fde047; border: 1px solid #fde047; }
+.dark .bmi-normal { background-color: rgba(187, 247, 208, 0.2); color: #86efac; border: 1px solid #86efac; }
+.dark .bmi-over { background-color: rgba(254, 215, 170, 0.2); color: #fdba74; border: 1px solid #fdba74; }
+.dark .bmi-obese { background-color: rgba(254, 202, 202, 0.2); color: #fca5a5; border: 1px solid #fca5a5; }
+
