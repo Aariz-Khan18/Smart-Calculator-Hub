@@ -147,3 +147,14 @@ select.calc-input option {
 .dark .bmi-over { background-color: rgba(254, 215, 170, 0.2); color: #fdba74; border: 1px solid #fdba74; }
 .dark .bmi-obese { background-color: rgba(254, 202, 202, 0.2); color: #fca5a5; border: 1px solid #fca5a5; }
 
+/* --- SECRET EASTER EGG LINK --- */
+.secret-link {
+  color: #10b981; /* primary */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.secret-link:hover {
+  color: #059669; /* primaryHover */
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  cursor: pointer;
+}
