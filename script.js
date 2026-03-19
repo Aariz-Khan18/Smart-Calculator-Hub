@@ -353,4 +353,3 @@ function calculateConversion() {
     outEl.value = parseFloat(((val * units[type][from]) / units[type][to]).toPrecision(10)).toString(); 
   }
 }
-
